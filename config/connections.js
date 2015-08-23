@@ -58,10 +58,10 @@ module.exports.connections = {
   ***************************************************************************/
   mongoDB: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
+    host: 'ds035613.mongolab.com',
+    port: 35613,
+     user: 'heroku_x2f690xq',
+     password: 'L30nardo'
     // database: 'your_mongo_db_name_here'
   },
 
