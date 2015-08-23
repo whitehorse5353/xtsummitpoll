@@ -1,0 +1,35 @@
+<div class="container">
+  <br>
+  <fieldset>
+    <legend><b>Add XT Summit Topics</b></legend>
+    <form method="post" action="/createTopic">
+      <div><label>Enter Topic <input type="text" required name="topic"></label></div>
+      <div><input type="submit" value="submit"></div>
+    </form>
+  </fieldset>
+  <hr>
+  <br>
+  <% if(data.length){ %>
+  <fieldset>
+    <legend>
+      <b>List of Topics</b>
+    </legend>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Topics</th>
+        <th>Likes</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% for(var i = 0; i < data.length; i++){ %>
+      <tr>
+        <td><%= data[i].topic %></td>
+        <td><b><%= data[i].score %></b></td>
+      </tr>
+      <% } %>
+      </tbody>
+    </table>
+  </fieldset>
+  <% } %>
+</div>

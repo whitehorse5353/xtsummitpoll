@@ -1,0 +1,26 @@
+<div class="container">
+  <% if(data.length){ %>
+  <h2>List of XT-Summit Topics</h2>
+
+  <form action="/getScores" method="post">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Topics</th>
+        <th>Like</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% for(var i = 0; i < data.length; i++){ %>
+      <tr>
+        <td><%= data[i].topic %></td>
+        <td><input type="checkbox" id="" name=<%= data[i].id %>></td>
+      </tr>
+      <% } %>
+      </tbody>
+    </table>
+    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit Feedback"/>
+  </form>
+  <% } %>
+
+</div>
